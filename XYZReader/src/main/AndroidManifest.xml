@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xyzreader"
+    package="com.rahuljanagouda.xyzreader"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -29,7 +29,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.item/vnd.com.example.xyzreader.items" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.rahuljanagouda.xyzreader.items" />
             </intent-filter>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -42,7 +42,7 @@
 
         <provider
             android:name=".data.ItemsProvider"
-            android:authorities="com.example.xyzreader"
+            android:authorities="com.rahuljanagouda.xyzreader"
             android:exported="false" />
 
     </application>

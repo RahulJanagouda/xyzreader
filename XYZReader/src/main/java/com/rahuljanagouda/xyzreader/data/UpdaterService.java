@@ -1,4 +1,4 @@
-package com.example.xyzreader.data;
+package com.rahuljanagouda.xyzreader.data;
 
 import android.app.IntentService;
 import android.content.ContentProviderOperation;
@@ -12,7 +12,7 @@ import android.os.RemoteException;
 import android.text.format.Time;
 import android.util.Log;
 
-import com.example.xyzreader.remote.RemoteEndpointUtil;
+import com.rahuljanagouda.xyzreader.remote.RemoteEndpointUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,9 +22,9 @@ import java.util.ArrayList;
 
 public class UpdaterService extends IntentService {
     public static final String BROADCAST_ACTION_STATE_CHANGE
-            = "com.example.xyzreader.intent.action.STATE_CHANGE";
+            = "com.rahuljanagouda.xyzreader.intent.action.STATE_CHANGE";
     public static final String EXTRA_REFRESHING
-            = "com.example.xyzreader.intent.extra.REFRESHING";
+            = "ccom.rahuljanagouda.xyzreader.intent.extra.REFRESHING";
     private static final String TAG = "UpdaterService";
 
     public UpdaterService() {

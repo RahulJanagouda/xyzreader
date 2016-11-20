@@ -1,4 +1,4 @@
-package com.example.xyzreader.remote;
+package com.rahuljanagouda.xyzreader.remote;
 
 import android.util.Log;
 
@@ -22,7 +22,7 @@ public class RemoteEndpointUtil {
     public static JSONArray fetchJsonArray() {
         String itemsJson = null;
         try {
-            itemsJson = fetchPlainText(Config.BASE_URL);
+            itemsJson = fetchPlainText(com.rahuljanagouda.xyzreader.remote.Config.BASE_URL);
         } catch (IOException e) {
             Log.e(TAG, "Error fetching items JSON", e);
             return null;

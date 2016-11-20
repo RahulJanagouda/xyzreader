@@ -1,4 +1,4 @@
-package com.example.xyzreader.ui;
+package com.rahuljanagouda.xyzreader.ui;
 
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
@@ -25,10 +25,10 @@ import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
-import com.example.xyzreader.R;
-import com.example.xyzreader.data.ArticleLoader;
-import com.example.xyzreader.data.ItemsContract;
-import com.example.xyzreader.data.UpdaterService;
+import com.rahuljanagouda.xyzreader.R;
+import com.rahuljanagouda.xyzreader.data.ArticleLoader;
+import com.rahuljanagouda.xyzreader.data.ItemsContract;
+import com.rahuljanagouda.xyzreader.data.UpdaterService;
 
 /**
  * An activity representing a list of Articles. This activity has different presentations for
@@ -120,13 +120,13 @@ public class ArticleListActivity extends ActionBarActivity implements
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         CardView itemCard;
-        public DynamicHeightNetworkImageView thumbnailView;
+        public com.rahuljanagouda.xyzreader.ui.DynamicHeightNetworkImageView thumbnailView;
         public TextView titleView;
         public TextView subtitleView;
 
         public ViewHolder(View view) {
             super(view);
-            thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
+            thumbnailView = (com.rahuljanagouda.xyzreader.ui.DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
             itemCard = (CardView) view.findViewById(R.id.itemCard);
@@ -179,9 +179,9 @@ public class ArticleListActivity extends ActionBarActivity implements
 
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
-                    ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
+                    com.rahuljanagouda.xyzreader.ui.ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
 
-            ImageLoaderHelper.getInstance(mContext).getImageLoader()
+            com.rahuljanagouda.xyzreader.ui.ImageLoaderHelper.getInstance(mContext).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.THUMB_URL), new ImageLoader.ImageListener() {
                         @Override
                         public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {

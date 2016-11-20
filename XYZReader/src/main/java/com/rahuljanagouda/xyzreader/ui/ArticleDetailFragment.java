@@ -1,4 +1,4 @@
-package com.example.xyzreader.ui;
+package com.rahuljanagouda.xyzreader.ui;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
@@ -29,8 +29,8 @@ import android.widget.TextView;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
-import com.example.xyzreader.R;
-import com.example.xyzreader.data.ArticleLoader;
+import com.rahuljanagouda.xyzreader.R;
+import com.rahuljanagouda.xyzreader.data.ArticleLoader;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is
@@ -47,8 +47,8 @@ public class ArticleDetailFragment extends Fragment implements
     private long mItemId;
     private View mRootView;
     private int mMutedColor = 0xFF333333;
-    private ObservableScrollView mScrollView;
-    private DrawInsetsFrameLayout mDrawInsetsFrameLayout;
+    private com.rahuljanagouda.xyzreader.ui.ObservableScrollView mScrollView;
+    private com.rahuljanagouda.xyzreader.ui.DrawInsetsFrameLayout mDrawInsetsFrameLayout;
     private ColorDrawable mStatusBarColorDrawable;
 
     private int mTopInset;
@@ -107,8 +107,8 @@ public class ArticleDetailFragment extends Fragment implements
         setHasOptionsMenu(true);
     }
 
-    public ArticleDetailActivity getActivityCast() {
-        return (ArticleDetailActivity) getActivity();
+    public com.rahuljanagouda.xyzreader.ui.ArticleDetailActivity getActivityCast() {
+        return (com.rahuljanagouda.xyzreader.ui.ArticleDetailActivity) getActivity();
     }
 
     @Override
@@ -126,17 +126,17 @@ public class ArticleDetailFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
-        mDrawInsetsFrameLayout = (DrawInsetsFrameLayout)
+        mDrawInsetsFrameLayout = (com.rahuljanagouda.xyzreader.ui.DrawInsetsFrameLayout)
                 mRootView.findViewById(R.id.draw_insets_frame_layout);
-        mDrawInsetsFrameLayout.setOnInsetsCallback(new DrawInsetsFrameLayout.OnInsetsCallback() {
+        mDrawInsetsFrameLayout.setOnInsetsCallback(new com.rahuljanagouda.xyzreader.ui.DrawInsetsFrameLayout.OnInsetsCallback() {
             @Override
             public void onInsetsChanged(Rect insets) {
                 mTopInset = insets.top;
             }
         });
 
-        mScrollView = (ObservableScrollView) mRootView.findViewById(R.id.scrollview);
-        mScrollView.setCallbacks(new ObservableScrollView.Callbacks() {
+        mScrollView = (com.rahuljanagouda.xyzreader.ui.ObservableScrollView) mRootView.findViewById(R.id.scrollview);
+        mScrollView.setCallbacks(new com.rahuljanagouda.xyzreader.ui.ObservableScrollView.Callbacks() {
             @Override
             public void onScrollChanged() {
                 mScrollY = mScrollView.getScrollY();
@@ -211,7 +211,7 @@ public class ArticleDetailFragment extends Fragment implements
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)
                             + "</font>"));
             bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
-            ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
+            com.rahuljanagouda.xyzreader.ui.ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
                         @Override
                         public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {

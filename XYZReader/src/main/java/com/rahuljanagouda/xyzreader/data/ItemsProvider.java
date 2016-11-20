@@ -1,4 +1,4 @@
-package com.example.xyzreader.data;
+package com.rahuljanagouda.xyzreader.data;
 
 import android.content.ContentProvider;
 import android.content.ContentProviderOperation;
@@ -50,7 +50,7 @@ public class ItemsProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         final SQLiteDatabase db = mOpenHelper.getReadableDatabase();
-        final SelectionBuilder builder = buildSelection(uri);
+        final com.rahuljanagouda.xyzreader.data.SelectionBuilder builder = buildSelection(uri);
         Cursor cursor = builder.where(selection, selectionArgs).query(db, projection, sortOrder);
         if (cursor != null) {
             cursor.setNotificationUri(getContext().getContentResolver(), uri);
@@ -77,7 +77,7 @@ public class ItemsProvider extends ContentProvider {
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
-        final SelectionBuilder builder = buildSelection(uri);
+        final com.rahuljanagouda.xyzreader.data.SelectionBuilder builder = buildSelection(uri);
         getContext().getContentResolver().notifyChange(uri, null);
         return builder.where(selection, selectionArgs).update(db, values);
     }
@@ -85,18 +85,18 @@ public class ItemsProvider extends ContentProvider {
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
-        final SelectionBuilder builder = buildSelection(uri);
+        final com.rahuljanagouda.xyzreader.data.SelectionBuilder builder = buildSelection(uri);
         getContext().getContentResolver().notifyChange(uri, null);
         return builder.where(selection, selectionArgs).delete(db);
     }
 
-    private SelectionBuilder buildSelection(Uri uri) {
-        final SelectionBuilder builder = new SelectionBuilder();
+    private com.rahuljanagouda.xyzreader.data.SelectionBuilder buildSelection(Uri uri) {
+        final com.rahuljanagouda.xyzreader.data.SelectionBuilder builder = new com.rahuljanagouda.xyzreader.data.SelectionBuilder();
         final int match = sUriMatcher.match(uri);
         return buildSelection(uri, match, builder);
     }
 
-    private SelectionBuilder buildSelection(Uri uri, int match, SelectionBuilder builder) {
+    private com.rahuljanagouda.xyzreader.data.SelectionBuilder buildSelection(Uri uri, int match, com.rahuljanagouda.xyzreader.data.SelectionBuilder builder) {
         final List<String> paths = uri.getPathSegments();
         switch (match) {
             case ITEMS: {

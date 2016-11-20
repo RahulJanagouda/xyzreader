@@ -1,4 +1,4 @@
-package com.example.xyzreader.ui;
+package com.rahuljanagouda.xyzreader.ui;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -16,9 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
 
-import com.example.xyzreader.R;
-import com.example.xyzreader.data.ArticleLoader;
-import com.example.xyzreader.data.ItemsContract;
+import com.rahuljanagouda.xyzreader.R;
+import com.rahuljanagouda.xyzreader.data.ArticleLoader;
+import com.rahuljanagouda.xyzreader.data.ItemsContract;
 
 /**
  * An activity representing a single Article detail screen, letting you swipe between articles.
@@ -139,7 +139,7 @@ public class ArticleDetailActivity extends ActionBarActivity
         mPagerAdapter.notifyDataSetChanged();
     }
 
-    public void onUpButtonFloorChanged(long itemId, ArticleDetailFragment fragment) {
+    public void onUpButtonFloorChanged(long itemId, com.rahuljanagouda.xyzreader.ui.ArticleDetailFragment fragment) {
         if (itemId == mSelectedItemId) {
             mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
             updateUpButtonPosition();
@@ -159,7 +159,7 @@ public class ArticleDetailActivity extends ActionBarActivity
         @Override
         public void setPrimaryItem(ViewGroup container, int position, Object object) {
             super.setPrimaryItem(container, position, object);
-            ArticleDetailFragment fragment = (ArticleDetailFragment) object;
+            com.rahuljanagouda.xyzreader.ui.ArticleDetailFragment fragment = (com.rahuljanagouda.xyzreader.ui.ArticleDetailFragment) object;
             if (fragment != null) {
                 mSelectedItemUpButtonFloor = fragment.getUpButtonFloor();
                 updateUpButtonPosition();
@@ -169,7 +169,7 @@ public class ArticleDetailActivity extends ActionBarActivity
         @Override
         public Fragment getItem(int position) {
             mCursor.moveToPosition(position);
-            return ArticleDetailFragment.newInstance(mCursor.getLong(ArticleLoader.Query._ID));
+            return com.rahuljanagouda.xyzreader.ui.ArticleDetailFragment.newInstance(mCursor.getLong(ArticleLoader.Query._ID));
         }
 
         @Override

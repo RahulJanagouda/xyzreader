@@ -1,10 +1,10 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.rahuljanagouda.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.xyzreader.ui.ObservableScrollView
+    <com.rahuljanagouda.xyzreader.ui.ObservableScrollView
         android:id="@+id/scrollview"
         android:background="@color/primary_200"
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:elevation="6dp"
                 android:layout_marginTop="250dp">
 
-                <com.example.xyzreader.ui.MaxWidthLinearLayout
+                <com.rahuljanagouda.xyzreader.ui.MaxWidthLinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -93,11 +93,11 @@
                         android:textColorLink="@color/accent_500"
                         android:textSize="@dimen/detail_body_text_size" />
 
-                </com.example.xyzreader.ui.MaxWidthLinearLayout>
+                </com.rahuljanagouda.xyzreader.ui.MaxWidthLinearLayout>
             </android.support.v7.widget.CardView>
 
         </FrameLayout>
-    </com.example.xyzreader.ui.ObservableScrollView>
+    </com.rahuljanagouda.xyzreader.ui.ObservableScrollView>
 
     <ImageButton
         android:id="@+id/share_fab"
@@ -112,4 +112,4 @@
         android:src="@drawable/ic_share"
         android:stateListAnimator="@animator/fab_state_list_anim" />
 
-</com.example.xyzreader.ui.DrawInsetsFrameLayout>
+</com.rahuljanagouda.xyzreader.ui.DrawInsetsFrameLayout>

@@ -20,7 +20,7 @@
  * -Changed package name
  */
 
-package com.example.xyzreader.data;
+package com.rahuljanagouda.xyzreader.data;
 
 import android.content.ContentValues;
 import android.database.Cursor;
