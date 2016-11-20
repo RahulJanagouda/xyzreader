@@ -1,23 +1,42 @@
 # xyzreader
-
-# BuildItBigger
+---------------
 This is the XYZ Reader(P5) project under Udacity Android Nanodegree Program
 
-Getting Started
+
+## Project Overview
+---------------
+In this project, you will redesign an app to follow the Material Design guidelines and translate a set of static design mocks to a living and breathing app.
+
+
+## Getting Started
 ---------------
 This sample uses the Gradle build system.  To build this project, use the
 "gradlew build" command or use "Import Project" in Android Studio.
 
 
+## Why this Project?
+-----------------
+This project gives you an opportunity to improve an app’s design, a vital skill for building apps users will love. It also replicates a common developer task of updating and changing an app's design as new standards are released.
+
+
+## What Will I Learn?
+--------------------
+Through this project, student will:
+* Understand the fundamentals of Android design.
+* Apply Material Design guidelines to an mobile application.
+* Separate an interface into surfaces.
+* Effectively use transitions and motion.
+
 
 ## User Feedback for XYZ Reader:
-
+-----------------------------------
 * This app is starting to shape up but it feels a bit off in quite a few places. I can't put finger on it but it feels odd.
 * Is the text supposed to be so wonky and unreadable? It is not accessible to those of us without perfect vision.
 * The color scheme is really sad and I shouldn't feel sad.
 
-# Rubric
 
+## Rubric
+----------
 ### Required Behavior
 * App uses the Design Support library and its provided widget types (FloatingActionButton, AppBarLayout, SnackBar, etc).
 * App uses CoordinatorLayout for the main Activity.
@@ -35,9 +54,9 @@ This sample uses the Gradle build system.  To build this project, use the
 
 
 
-License
+#License
 -------
-Copyright 2015 The Android Open Source Project, Inc.
+Copyright 2016 Rahul Janagouda
 
 Licensed to the Apache Software Foundation (ASF) under one or more contributor
 license agreements.  See the NOTICE file distributed with this work for
