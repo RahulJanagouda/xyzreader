@@ -19,7 +19,7 @@
             android:id="@+id/thumbnail"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/photo_placeholder" />
+            android:background="@color/grey_500" />
 
         <TextView
             android:id="@+id/article_title"
@@ -32,7 +32,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingTop="16dp"
-            android:textColor="@color/ltgray" />
+            android:textColor="@color/primary_text" />
 
         <TextView
             android:id="@+id/article_subtitle"
