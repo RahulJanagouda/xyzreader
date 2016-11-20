@@ -7,17 +7,24 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.graphics.Palette;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
@@ -46,12 +53,15 @@ public class ArticleListActivity extends ActionBarActivity implements
         }
     };
 
+    Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article_list);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mContext = this;
 
 
         final View toolbarContainerView = findViewById(R.id.toolbar_container);
@@ -109,6 +119,7 @@ public class ArticleListActivity extends ActionBarActivity implements
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        CardView itemCard;
         public DynamicHeightNetworkImageView thumbnailView;
         public TextView titleView;
         public TextView subtitleView;
@@ -118,6 +129,7 @@ public class ArticleListActivity extends ActionBarActivity implements
             thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
+            itemCard = (CardView) view.findViewById(R.id.itemCard);
         }
     }
 
@@ -149,8 +161,10 @@ public class ArticleListActivity extends ActionBarActivity implements
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, int position) {
             mCursor.moveToPosition(position);
+            holder.itemCard.setVisibility(View.GONE);
+
             holder.titleView.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             holder.subtitleView.setText(
                     DateUtils.getRelativeTimeSpanString(
@@ -159,9 +173,42 @@ public class ArticleListActivity extends ActionBarActivity implements
                             DateUtils.FORMAT_ABBREV_ALL).toString()
                             + " by "
                             + mCursor.getString(ArticleLoader.Query.AUTHOR));
+
+
+            final Animation myFadeInAnimation = AnimationUtils.loadAnimation(mContext, R.anim.fadein);
+
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
+
+            ImageLoaderHelper.getInstance(mContext).getImageLoader()
+                    .get(mCursor.getString(ArticleLoader.Query.THUMB_URL), new ImageLoader.ImageListener() {
+                        @Override
+                        public void onResponse(ImageLoader.ImageContainer imageContainer, boolean b) {
+
+
+                            Bitmap bitmap = imageContainer.getBitmap();
+                            if (bitmap != null) {
+                                Palette p = Palette.generate(bitmap, 12);
+                                int mMutedColor = p.getDarkMutedColor(0xFF202020);
+//                                int mMutedColor = p.getDarkMutedColor(0x000000);
+                                holder.itemCard.startAnimation(myFadeInAnimation);
+                                holder.itemCard.setBackgroundColor(mMutedColor);
+                                holder.itemCard.setVisibility(View.VISIBLE);
+
+                            }
+                        }
+
+                        @Override
+                        public void onErrorResponse(VolleyError volleyError) {
+                            holder.itemCard.startAnimation(myFadeInAnimation);
+                            holder.itemCard.setBackgroundColor(getResources().getColor(R.color.white));
+                            holder.itemCard.setVisibility(View.VISIBLE);
+
+                        }
+                    });
+
+
             holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
         }
 

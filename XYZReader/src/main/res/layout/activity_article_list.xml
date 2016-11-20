@@ -13,6 +13,7 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/primary_200"
             android:clipToPadding="false"
             android:paddingBottom="28dp"
             android:paddingLeft="@dimen/list_side_margin"
@@ -24,8 +25,8 @@
     <FrameLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:background="?colorPrimary"
+        android:layout_height="100dp"
+        android:background="@color/primary_500"
         android:elevation="8dp">
 
         <android.support.v7.widget.Toolbar
@@ -35,12 +36,14 @@
             android:layout_gravity="bottom"
             android:layout_marginLeft="@dimen/list_toolbar_side_margin"
             android:layout_marginRight="@dimen/list_toolbar_side_margin"
+            android:gravity="center"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/app_name"
+                android:scaleType="center"
                 android:src="@drawable/logo" />
 
         </android.support.v7.widget.Toolbar>

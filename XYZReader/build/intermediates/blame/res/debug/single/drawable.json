@@ -8,12 +8,12 @@
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_edit_text_material.xml"
-    },
-    {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_edit_text_material.xml"
     },
     {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
@@ -40,12 +40,12 @@
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_btn_radio_material.xml"
-    },
-    {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_btn_radio_material.xml"
     },
     {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
@@ -112,10 +112,6 @@
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
-        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/drawable/abc_ratingbar_full_material.xml"
-    },
-    {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ic_search_api_material.xml"
     },
@@ -124,12 +120,12 @@
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/src/main/res/drawable/photo_background_protection.xml"
     },
     {
-        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/padded_divider.xml",
-        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/src/main/res/drawable/padded_divider.xml"
-    },
-    {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/padded_divider.xml",
+        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/src/main/res/drawable/padded_divider.xml"
     },
     {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background.xml",

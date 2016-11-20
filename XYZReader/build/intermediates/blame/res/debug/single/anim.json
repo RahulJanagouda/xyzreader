@@ -28,6 +28,10 @@
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/anim/abc_fade_out.xml"
     },
     {
+        "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/anim/fadein.xml",
+        "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/src/main/res/anim/fadein.xml"
+    },
+    {
         "merged": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
         "source": "/Users/rahuljanagouda/Documents/UdacityNanoDegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/anim/abc_slide_in_bottom.xml"
     },
