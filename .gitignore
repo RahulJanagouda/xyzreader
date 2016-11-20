@@ -40,3 +40,4 @@ captures/
 *.jks
 src/main/res/values-v21/
 /.gradle/
+/.idea/
