@@ -32,7 +32,6 @@ public class ArticleListActivity extends AppCompatActivity
         implements SwipeRefreshLayout.OnRefreshListener,
         LoaderManager.LoaderCallbacks<Cursor> {
 
-
     @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout mSwipeRefreshLayout;
     @BindView(R.id.recycler_view)
@@ -61,6 +60,7 @@ public class ArticleListActivity extends AppCompatActivity
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         int columnCount = getResources().getInteger(R.integer.grid_column_count);
         StaggeredGridLayoutManager staggeredGridLayoutManager =

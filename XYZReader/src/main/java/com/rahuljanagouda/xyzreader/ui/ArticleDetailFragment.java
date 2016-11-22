@@ -1,6 +1,5 @@
 package com.rahuljanagouda.xyzreader.ui;
 
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -21,8 +20,6 @@ import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -47,10 +44,7 @@ import butterknife.Unbinder;
  */
 public class ArticleDetailFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<Cursor> {
-    public static final String ARG_ITEM_ID = "item_id";
-    private static final String TAG = "ArticleDetailFragment";
-    private static final float PARALLAX_FACTOR = 1.25f;
-
+    public static final String ARG_ITEM_ID = "ARG_ITEM_ID";
     @BindView(R.id.photo)
     ImageView mPhotoView;
     @BindView(R.id.meta_bar)
@@ -75,8 +69,6 @@ public class ArticleDetailFragment extends Fragment implements
     @Nullable
     @BindView(R.id.card)
     CardView mCard;
-    Context mContext;
-    Animation myFadeInAnimation;
     private Unbinder unbinder;
     private long mItemId;
 
@@ -99,8 +91,6 @@ public class ArticleDetailFragment extends Fragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = getActivity();
-        myFadeInAnimation = AnimationUtils.loadAnimation(mContext, R.anim.fadein);
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             mItemId = getArguments().getLong(ARG_ITEM_ID);
