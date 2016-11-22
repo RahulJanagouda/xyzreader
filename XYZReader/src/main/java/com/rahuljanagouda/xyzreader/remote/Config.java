@@ -5,6 +5,10 @@ import android.util.Log;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
+
 public class Config {
     public static final URL BASE_URL;
     public static String LOG_TAG = Config.class.getSimpleName();

@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
 
 /**
  * An activity representing a single Article detail screen, letting you swipe between articles.
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
  */
 public class ArticleDetailActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<Cursor> {

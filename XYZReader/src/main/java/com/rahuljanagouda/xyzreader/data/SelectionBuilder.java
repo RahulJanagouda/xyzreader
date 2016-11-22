@@ -36,6 +36,7 @@ import java.util.HashMap;
  * Helper for building selection clauses for {@link SQLiteDatabase}. Each
  * appended clause is combined using {@code AND}. This class is <em>not</em>
  * thread safe.
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
  */
 public class SelectionBuilder {
     private String mTable = null;

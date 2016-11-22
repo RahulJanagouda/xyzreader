@@ -2,10 +2,13 @@ package com.rahuljanagouda.xyzreader.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 
-import com.android.volley.toolbox.NetworkImageView;
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
 
-public class DynamicHeightNetworkImageView extends NetworkImageView {
+public class DynamicHeightNetworkImageView extends ImageView {
     private float mAspectRatio = 1.5f;
 
     public DynamicHeightNetworkImageView(Context context) {
@@ -20,15 +23,15 @@ public class DynamicHeightNetworkImageView extends NetworkImageView {
         super(context, attrs, defStyle);
     }
 
-    public void setAspectRatio(float aspectRatio) {
-        mAspectRatio = aspectRatio;
-        requestLayout();
-    }
-
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int measuredWidth = getMeasuredWidth();
         setMeasuredDimension(measuredWidth, (int) (measuredWidth / mAspectRatio));
+    }
+
+    public void setAspectRatio(float aspectRatio) {
+        mAspectRatio = aspectRatio;
+        requestLayout();
     }
 }

@@ -16,6 +16,10 @@ import android.support.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
+
 public class ItemsProvider extends ContentProvider {
     private static final int ITEMS = 0;
     private static final int ITEMS__ID = 1;

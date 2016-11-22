@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import static com.rahuljanagouda.xyzreader.data.ItemsProvider.Tables;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
+
 public class ItemsDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "xyzreader.db";
     private static final int DATABASE_VERSION = 1;

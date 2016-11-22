@@ -6,7 +6,9 @@ import android.support.v4.content.CursorLoader;
 
 /**
  * Helper for loading a list of articles or a single article.
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
  */
+
 public class ArticleLoader extends CursorLoader {
     private ArticleLoader(Context context, Uri uri) {
         super(context, uri, Query.PROJECTION, null, null, ItemsContract.Items.DEFAULT_SORT);

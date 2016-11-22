@@ -21,6 +21,9 @@ import com.rahuljanagouda.xyzreader.R;
 import com.rahuljanagouda.xyzreader.data.ArticleLoader;
 import com.rahuljanagouda.xyzreader.data.ItemsContract;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
 
 public class ArticleListAdapter extends CursorRecyclerViewAdapter<ArticleListAdapter.ViewHolder> {
 

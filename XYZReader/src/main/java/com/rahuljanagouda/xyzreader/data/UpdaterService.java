@@ -21,6 +21,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
+
 public class UpdaterService extends IntentService {
     public static final String BROADCAST_ACTION_STATE_CHANGE
             = "com.rahuljanagouda.xyzreader.intent.action.STATE_CHANGE";

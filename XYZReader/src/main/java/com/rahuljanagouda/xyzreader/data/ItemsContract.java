@@ -2,6 +2,10 @@ package com.rahuljanagouda.xyzreader.data;
 
 import android.net.Uri;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
+
 public class ItemsContract {
     public static final String CONTENT_AUTHORITY = "com.rahuljanagouda.xyzreader";
     public static final Uri BASE_URI = Uri.parse("content://com.rahuljanagouda.xyzreader");

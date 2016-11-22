@@ -13,6 +13,10 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+/**
+ * credits: https://github.com/DmitryMalkovich/make-your-app-material
+ */
+
 public class RemoteEndpointUtil {
     private static final String TAG = "RemoteEndpointUtil";
 
